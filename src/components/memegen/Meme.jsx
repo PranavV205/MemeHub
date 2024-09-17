@@ -1,5 +1,4 @@
 import React from "react"
-import memesData from "../memesData"
 
 export default function Meme (){
     
@@ -37,12 +36,11 @@ export default function Meme (){
         }))
     }
 
-    console.log(meme)
     
     return (
 
-        <main>
-            <div className="form">
+        <main className="flex items-center justify-center flex-col">
+            <div className="grid grid-rows-2 grid-cols-2 gap-5 justify-center pt-12">
                 <input 
                     type="text"
                     placeholder="Top text"

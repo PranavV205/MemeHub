@@ -1,5 +1,5 @@
-import Header from "./components/Header.jsx"
-import Meme from "./components/Meme.jsx"
+import Header from "./components/memegen/Header.jsx"
+import Meme from "./components/memegen/Meme.jsx"
 
 export default function App(){
   return (
