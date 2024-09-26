@@ -3,27 +3,18 @@ import React, { useState } from 'react'
 
 function MemeCard({count, memeData}) {
 
-    const memes = memeData.memes
-
-    const [isExpanded, setIsExpanded] = useState(false)
-
-    const handleExpandClick = () =>  {
-        setIsExpanded(prev => !prev)
-    }
-
-
-    
+    const memes = memeData.memes 
 
   return (
     <>
         {memes.map((meme) => {
             return (
-                <div className='h-80 w-80 rounded-xl overflow-hidden bg-[#660c65]'>
-                    <div className='flex justify-center bg-black'>
-                        <img className='w-64 h-64 object-contain mb-3' src={meme.url}/>
+                <div className='h-80 w-80 rounded-xl overflow-hidden bg-[#222429]'>
+                    <div className='flex justify-center bg-[#121316] items-center'>
+                        <img className='w-64 h-64 object-contain' src={meme.url}/>
                     </div>
                     <div className='flex flex-row'>
-                        <h2 className='text-sm ml-3'>{meme.title}</h2>
+                        <h2 className='text-sm ml-3 mt-3'>{meme.title}</h2>
                     </div>
                 </div>
             )

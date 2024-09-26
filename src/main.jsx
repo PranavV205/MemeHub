@@ -4,8 +4,10 @@ import "./index.css"
 
 import Memegen from "./components/memegen/Memegen.jsx"
 import Landing from "./components/landing/Landing.jsx"
+import About from "./components/About/About.jsx"
 
 import {RouterProvider, createHashRouter } from "react-router-dom"
+import Developer from "./components/Developer/Developer.jsx"
 
 const router = createHashRouter([
 
@@ -16,6 +18,14 @@ const router = createHashRouter([
     {
       path: "/memegen",
       element: <Memegen />,
+    },
+    {
+      path: '/about',
+      element: <About />
+    },
+    {
+      path: '/developer',
+      element: <Developer/>
     },
 ])
   

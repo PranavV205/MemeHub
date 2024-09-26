@@ -9,11 +9,8 @@ function MemeRow({subreddit}) {
   const {data:memeData, isLoading, error} = useMemeData(subreddit, count)
 
   return (
-    <div className='flex flex-col justify-center mb-7 shadow-lg'>
-      <div className='flex w-auto justify-center m-3'>
-        <b className='mb-2 text-xl'>{subreddit}</b>
-      </div>
-      <div className='flex justify-center flex-row gap-5 mb-6'>
+    <div className='flex flex-col justify-center mb-6'>
+      <div className='flex justify-center flex-row gap-5'>
       {memeData ? 
         <MemeCard 
             count={count} 

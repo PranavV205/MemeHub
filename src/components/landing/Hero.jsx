@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import MemeRow from './MemeRow'
 
 import { subreddits } from '../../constants/subreddit'
+import Divider from '@mui/material/Divider'
 
 function Hero() {
     
@@ -13,7 +14,12 @@ function Hero() {
             <div className='flex flex-col w-auto'>
                 {subreddits.map((subreddit) => {
                     return (
-                        <MemeRow subreddit={subreddit}/>
+                        <>
+                            <Divider variant='middle' sx={{ marginBottom: '14px', "&::before, &::after": {
+                            borderColor: 'white',  // Makes the line white
+                        } }}><b className='text-xl'>{subreddit}</b></Divider>
+                            <MemeRow subreddit={subreddit}/>
+                        </>
                     )
                 })}
             </div>
