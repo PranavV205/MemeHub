@@ -2,6 +2,7 @@
   "name": "memegen",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://Pranavv205.github.io/MemeHub/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-function MemeCard({count, memeData}) {
+function MemeCard({memeData}) {
 
     const memes = memeData.memes 
 

@@ -5,9 +5,9 @@ import "./index.css"
 import Memegen from "./components/memegen/Memegen.jsx"
 import Landing from "./components/landing/Landing.jsx"
 import About from "./components/About/About.jsx"
+import Developer from "./components/Developer/Developer.jsx"
 
 import {RouterProvider, createHashRouter } from "react-router-dom"
-import Developer from "./components/Developer/Developer.jsx"
 
 const router = createHashRouter([
 

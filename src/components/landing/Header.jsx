@@ -8,7 +8,7 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const threshold = window.innerHeight * 0.5; // 10% of the viewport height
+      const threshold = window.innerHeight * 0.5; // 50% of the viewport height
       if (window.scrollY > threshold) {
         setIsScrolled(true);
       } else {
@@ -29,10 +29,10 @@ function Header() {
         <div className="w-full h-full flex flex-col items-center justify-center">
           <h1 className="text-9xl">MEME</h1>
           <h1 className="text-9xl">HUB</h1>
-          <div className='flex flex-row text-[#6d7275] gap-6 mt-5'>
-            <a href='/#/about'>About</a>
-            <a href='/#/developer'>Developer</a>
-            <a href='/#/memegen'>Create your own meme!</a>
+          <div className='flex text-[#6d7275] gap-6 mt-5'>
+            <a href='/MemeHub/#/about'>About</a>
+            <a href='/MemeHub/#/developer'>Developer</a>
+            <a href='/MemeHub/#/memegen'>Create your own meme!</a>
           </div>
         </div>
         <img src={bgimg} className="h-full" alt="Meme Hub Background" />

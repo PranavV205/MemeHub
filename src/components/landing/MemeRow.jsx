@@ -6,20 +6,19 @@ import MemeCard from './MemeCard'
 function MemeRow({subreddit}) {
   
   const [count, setCount] = useState(4)
-  const {data:memeData, isLoading, error} = useMemeData(subreddit, count)
+  const {data:memeData, error} = useMemeData(subreddit, count)
+
+  if (error) return <><h3>{error}</h3></>
 
   return (
-    <div className='flex flex-col justify-center mb-6'>
       <div className='flex justify-center flex-row gap-5'>
       {memeData ? 
-        <MemeCard 
-            count={count} 
+        <MemeCard
             memeData={memeData}
         /> : 
         <div>Loading...</div>
       }
       </div> 
-    </div>
   )
 }
 

@@ -14,7 +14,6 @@ function useMemeData(subreddit, count){
             setData(res)
         } catch(e) {
             setError(e)
-            setIsLoading(false)
         } finally {
             setIsLoading(false)
         }
@@ -23,9 +22,6 @@ function useMemeData(subreddit, count){
     useEffect( () => {
         getData()
     },[])
-
-    console.log(isLoading)
-    console.log(data)
 
     return {data, isLoading, error}
 }

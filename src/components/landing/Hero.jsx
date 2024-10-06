@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-
 import MemeRow from './MemeRow'
 
 import { subreddits } from '../../constants/subreddit'
