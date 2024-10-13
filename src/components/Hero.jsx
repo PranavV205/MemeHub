@@ -9,7 +9,7 @@ function Hero() {
     
     return (
         <>
-            <div className='flex flex-col w-auto'>
+            <div className='flex flex-col w-auto m-10'>
                 {subreddits.map((subreddit) => {
                     return (
                         <>

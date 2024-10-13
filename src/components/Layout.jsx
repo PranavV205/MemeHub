@@ -1,5 +1,7 @@
 import {useState, useEffect, useRef} from 'react'
-import { Outlet } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
+
+import bgimg from "../assets/bg.jpeg"
 
 function Layout() {
 
@@ -28,34 +30,19 @@ function Layout() {
   return (
     <>
       {/* Large Header */}
-      <header className={`flex justify-between items-center bg-[#022954] text-white mb-8 h-96 transition-opacity duration-700 ${isScrolled ? 'opacity-0' : 'opacity-100'}`} style={{ fontFamily: 'Anton' }}>
-        <div className="w-full h-full flex flex-col items-center justify-center">
-          <h1 className="text-9xl">MEME</h1>
-          <h1 className="text-9xl">HUB</h1>
-          <div className='flex text-white gap-6 mt-5'>
-            <a href='/MemeHub/#/about'>About</a>
-            <a href='/MemeHub/#/developer'>Developer</a>
-            <a href='/memegen'>Create your own meme!</a>
+      <header className='bg-[#000000] text-[#000000] flex m-10 rounded-2xl overflow-hidden shadow-2xl'>
+        <div className='w-full h-full'>
+          <img src={bgimg} className='h-full'/>
+        </div>
+        <div className='w-full h-full py-6 flex flex-col justify-center items-center'>
+          <h1 className='text-9xl'>Meme Hub</h1>
+          <div className='flex flex-col ml-5 mt-5 items-center gap-2'>
+            <NavLink className="text-2xl bg-blue-50 rounded-lg text-[#000000] py-1 px-3" to="/memegen">Create your own meme!</NavLink>
+            <NavLink className="text-2xl bg-blue-50 rounded-lg text-black py-1 px-3" to="/sub">Broken</NavLink>
+            <NavLink className="text-2xl bg-blue-50 rounded-lg text-black py-1 px-3" to="/sub">Broken</NavLink>
+            <NavLink className="text-2xl bg-blue-50 rounded-lg text-black py-1 px-3" to="/sub">Broken</NavLink>
           </div>
         </div>
-        <form className='h-full w-full flex flex-col justify-center items-center'>
-          <label 
-            htmlFor='sub' 
-            className='text-xl mb-2 '
-          >Enter subreddit name:</label>
-          <input 
-            type='search' 
-            placeholder='GymMemes' 
-            name='sub' 
-            className='rounded-lg p-3 bg-black'
-            onChange={(e) => setInputValue(e.target.value)}
-            value={inputValue}
-          />
-          <button
-            type='submit'
-            className='mt-2 text-2xl bg-black py-1 px-3 rounded-lg'
-          >Search</button>
-        </form>
       </header>
 
       {/* Small Sticky Header */}
