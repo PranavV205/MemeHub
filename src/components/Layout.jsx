@@ -1,6 +1,7 @@
 import {useState, useEffect, useRef} from 'react'
+import { Outlet } from 'react-router-dom';
 
-function Header() {
+function Layout() {
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -34,7 +35,7 @@ function Header() {
           <div className='flex text-white gap-6 mt-5'>
             <a href='/MemeHub/#/about'>About</a>
             <a href='/MemeHub/#/developer'>Developer</a>
-            <a href='/MemeHub/#/memegen'>Create your own meme!</a>
+            <a href='/memegen'>Create your own meme!</a>
           </div>
         </div>
         <form className='h-full w-full flex flex-col justify-center items-center'>
@@ -61,8 +62,9 @@ function Header() {
       <header className={`fixed top-0 left-0 w-full bg-[#022954] text-white h-16 flex justify-center items-center transition-transform duration-300 ${isScrolled ?'translate-y-0' : '-translate-y-full'}`} style={{ fontFamily: 'Anton' }}>
         <h1 className="text-4xl">MEME HUB</h1>
       </header>
+      <Outlet />
     </>
   )
 }
 
-export default Header
+export default Layout
