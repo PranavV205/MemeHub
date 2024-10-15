@@ -30,23 +30,23 @@ function Layout() {
   return (
     <>
       {/* Large Header */}
-      <header className='bg-[#000000] text-[#000000] flex m-10 rounded-2xl overflow-hidden shadow-2xl'>
+      <header className='bg-[#f7f6ee] text-[#101820] flex m-10 rounded-2xl overflow-hidden shadow-2xl'>
         <div className='w-full h-full'>
           <img src={bgimg} className='h-full'/>
         </div>
         <div className='w-full h-full py-6 flex flex-col justify-center items-center'>
           <h1 className='text-9xl'>Meme Hub</h1>
           <div className='flex flex-col ml-5 mt-5 items-center gap-2'>
-            <NavLink className="text-2xl bg-blue-50 rounded-lg text-[#000000] py-1 px-3" to="/memegen">Create your own meme!</NavLink>
-            <NavLink className="text-2xl bg-blue-50 rounded-lg text-black py-1 px-3" to="/sub">Broken</NavLink>
-            <NavLink className="text-2xl bg-blue-50 rounded-lg text-black py-1 px-3" to="/sub">Broken</NavLink>
-            <NavLink className="text-2xl bg-blue-50 rounded-lg text-black py-1 px-3" to="/sub">Broken</NavLink>
+            <NavLink className="text-2xl bg-[#f7f6eeb9] rounded-lg text-[#000000] py-1 px-3" to="/memegen">Create your own meme!</NavLink>
+            <NavLink className="text-2xl bg-[#f7f6ee] rounded-lg text-black py-1 px-3" to="/sub">Broken</NavLink>
+            <NavLink className="text-2xl bg-[#f7f6ee] rounded-lg text-black py-1 px-3" to="/sub">Broken</NavLink>
+            <NavLink className="text-2xl bg-[#f7f6ee] rounded-lg text-black py-1 px-3" to="/sub">Broken</NavLink>
           </div>
         </div>
       </header>
 
       {/* Small Sticky Header */}
-      <header className={`fixed top-0 left-0 w-full bg-[#022954] text-white h-16 flex justify-center items-center transition-transform duration-300 ${isScrolled ?'translate-y-0' : '-translate-y-full'}`} style={{ fontFamily: 'Anton' }}>
+      <header className={`fixed top-0 left-0 w-full bg-[#192531] text-white h-16 flex justify-center items-center transition-transform duration-300 ${isScrolled ?'translate-y-0' : '-translate-y-full'}`} style={{ fontFamily: 'Anton' }}>
         <h1 className="text-4xl">MEME HUB</h1>
       </header>
       <Outlet />
