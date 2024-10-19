@@ -5,49 +5,23 @@ import bgimg from "../assets/bg.jpeg"
 
 function Layout() {
 
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const [inputValue, setInputValue] = useState('')
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const threshold = window.innerHeight * 0.5; // 50% of the viewport height
-      if (window.scrollY > threshold) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll)
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    };
-  }, []);
-
-
   return (
     <>
       {/* Large Header */}
-      <header className='bg-[#f7f6ee] text-[#101820] flex m-10 rounded-2xl overflow-hidden shadow-2xl'>
+      <header 
+        className='bg-[#f7f6ee] text-[#101820] flex flex-col m-5 sm:m-10 rounded-2xl overflow-hidden shadow-2xl md:flex-row'>
         <div className='w-full h-full'>
           <img src={bgimg} className='h-full'/>
         </div>
-        <div className='w-full h-full py-6 flex flex-col justify-center items-center'>
-          <h1 className='text-9xl'>Meme Hub</h1>
-          <div className='flex flex-col ml-5 mt-5 items-center gap-2'>
-            <NavLink className="text-2xl bg-[#f7f6eeb9] rounded-lg text-[#000000] py-1 px-3" to="/memegen">Create your own meme!</NavLink>
-            <NavLink className="text-2xl bg-[#f7f6ee] rounded-lg text-black py-1 px-3" to="/sub">Broken</NavLink>
-            <NavLink className="text-2xl bg-[#f7f6ee] rounded-lg text-black py-1 px-3" to="/sub">Broken</NavLink>
-            <NavLink className="text-2xl bg-[#f7f6ee] rounded-lg text-black py-1 px-3" to="/sub">Broken</NavLink>
+        <div className='w-full py-2 flex flex-col justify-center items-center'>
+          <h1 className='text-4xl lg:text-6xl xl:text-8xl 2xl:text-9xl'>Meme Hub</h1>
+          <div className='flex flex-col mt-2 items-center justify-center text-md lg:text-xl lg:gap-1 2xl:text-2xl 2xl:gap-2 4k:text-3xl 4k:gap-4'>
+            <NavLink className=" rounded-lg " to="/memegen">Create your own meme!</NavLink>
+            <NavLink className=" rounded-lg " to="/sub">Broken</NavLink>
+            <NavLink className=" rounded-lg " to="/sub">Broken</NavLink>
+            <NavLink className=" rounded-lg " to="/sub">Broken</NavLink>
           </div>
         </div>
-      </header>
-
-      {/* Small Sticky Header */}
-      <header className={`fixed top-0 left-0 w-full bg-[#192531] text-white h-16 flex justify-center items-center transition-transform duration-300 ${isScrolled ?'translate-y-0' : '-translate-y-full'}`} style={{ fontFamily: 'Anton' }}>
-        <h1 className="text-4xl">MEME HUB</h1>
       </header>
       <Outlet />
     </>
