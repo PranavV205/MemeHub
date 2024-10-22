@@ -4,5 +4,10 @@ export const subreddits = [
     'GymMemes',
     'HistoryMemes',
     'RelationshipMemes',
-    'wholesomememes'
+    'wholesomememes',
+    'dankmemes',
+    'Animemes',
+    'TheRealJoke',
+    'formuladank',
+    'comedyheaven'
 ]
