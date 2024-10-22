@@ -24,3 +24,18 @@ body {
   width: 100%;
 }
 
+.custom-input::-webkit-search-cancel-button,
+.custom-input::-webkit-search-decoration,
+.custom-input::-webkit-clear-button {
+    display: none;
+}
+
+/* Remove clear button for Microsoft Edge and Internet Explorer */
+.custom-input::-ms-clear {
+    display: none;
+}
+
+/* Remove clear button for Firefox */
+.custom-input {
+    appearance: none; /* Disables native styling that can introduce clear buttons */
+}

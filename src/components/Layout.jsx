@@ -1,27 +1,36 @@
 import {useState, useEffect, useRef} from 'react'
 import { Outlet, NavLink } from 'react-router-dom';
 
-import bgimg from "../assets/bg.jpeg"
-
 function Layout() {
 
   return (
     <>
       {/* Large Header */}
       <header 
-        className='bg-[#f7f6ee] text-[#101820] flex flex-col m-5 sm:m-10 rounded-2xl overflow-hidden shadow-2xl md:flex-row'>
-        <div className='w-full h-full'>
-          <img src={bgimg} className='h-full'/>
-        </div>
-        <div className='w-full py-2 flex flex-col justify-center items-center'>
-          <h1 className='text-4xl lg:text-6xl xl:text-8xl 2xl:text-9xl'>Meme Hub</h1>
-          <div className='flex flex-col mt-2 items-center justify-center text-md lg:text-xl lg:gap-1 2xl:text-2xl 2xl:gap-2 4k:text-3xl 4k:gap-4'>
-            <NavLink className=" rounded-lg " to="/memegen">Create your own meme!</NavLink>
-            <NavLink className=" rounded-lg " to="/sub">Broken</NavLink>
-            <NavLink className=" rounded-lg " to="/sub">Broken</NavLink>
-            <NavLink className=" rounded-lg " to="/sub">Broken</NavLink>
+        className='bg-[#f7f6ee] text-[#101820] flex m-5 rounded-lg '>
+          <div className='w-full py-2 md:py-3 lg:py-4 xl:py-6 4k:py-10 flex flex-col justify-center items-center'>
+            <h1 className='text-2xl md:text-5xl lg:text-6xl xl:text-7xl 4k:text-9xl'><b>Meme Hub</b></h1>
+            <NavLink 
+              className=" rounded-lg text-sm underline md:text-xl md:mt-1 lg:text-2xl xl:text-3xl 4k:mt-4 4k:text-5xl" 
+              to="/memegen"
+            >Build a meme</NavLink>
           </div>
-        </div>
+          <form className='flex justify-center items-center w-full'>
+            <div className='mx-5 relative flex items-center'>
+              <input 
+                type='search' 
+                name='sub' 
+                placeholder='Enter Subreddit' 
+                className='rounded-lg text-sm w-full py-1 pl-1 pr-7 bg-[#ecebdf] text-ellipsis appearance-none border-none outline-none md:p-2 md:pr-10 md:text-xl lg:text-2xl lg:p-3 lg:pr-14 xl:pr-16 xl:p-4 4k:text-3xl 4k:pr-20 4k:p-5 custom-input'
+              />
+              <button 
+                type='submit'
+                className='absolute right-1 p-1 h-full rounded-xl md:p-2 md:text-xl lg:text-2xl lg:p-3 xl:text-3xl xl:p-4 4k:text-3xl 4k:p-5'
+              ><i class='bx bx-search-alt-2'></i></button>
+            </div>
+          </form>
+              
+        
       </header>
       <Outlet />
     </>
