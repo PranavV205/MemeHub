@@ -10,7 +10,7 @@ function Hero() {
     
     return (
         <>
-            <div className='flex flex-col w-auto m-10'>
+            <div className='flex flex-col w-auto md:m-5 lg:m-10'>
                 {subreddits
                 .sort(() => 0.5 - Math.random())
                 .slice(0, 10)
