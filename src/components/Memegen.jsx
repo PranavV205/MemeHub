@@ -18,22 +18,17 @@ export default function Memegen (){
         }))
     }
 
-    const [allMeme, setAllMeme] = React.useState([])
-    
-    React.useEffect(() => {
+    function getMemeImage (){
         fetch("https://meme-api-09gx.onrender.com/api/v1/images/gimme")
             .then(res => res.json())
-            .then(data => setAllMeme(data))
-    }, [])
-
-    function getMemeImage (){
-        const randomNumber = Math.floor(Math.random() * allMeme.length)
-        const url = allMeme[randomNumber].url
-
-        setMeme(prevMeme => ({
-            ...prevMeme,
-            randomImage: url
-        }))
+            .then(data => {
+                setMeme(prevMeme => {
+                    return {
+                        ...prevMeme,
+                        randomImage: data.imageFile
+                    }
+                })
+            })
     }
 
     
@@ -62,7 +57,7 @@ export default function Memegen (){
                 </button>
             </div>
             <div className="meme">
-                <img src={meme.imageFile} className="meme--image" />
+                <img src={meme.randomImage} className="meme--image" />
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
