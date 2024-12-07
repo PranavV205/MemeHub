@@ -5,8 +5,6 @@ function Subreddit({subreddit}) {
 
     const {data:memeData} = useMemeData(subreddit, 20)
 
-    console.log(memeData)
-
     if (memeData?.code === 400 || memeData?.code === 404){
         return (
             <div className='m-5 lg:m-10 text-2xl gap-2 lg:text-3xl lg:gap-3 4k:text-4xl 4k:gap-4 flex flex-col justify-center items-center'>
