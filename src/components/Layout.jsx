@@ -1,5 +1,5 @@
 import {useState, } from 'react'
-import { Outlet, NavLink, useNavigate } from 'react-router-dom';
+import { Outlet, Link, useNavigate } from 'react-router-dom';
 import Subreddit from './Subreddit';
 
 function Layout() {
@@ -13,13 +13,13 @@ function Layout() {
     if (inputValue){
       setIsSubmitted(false)
       setTimeout(() => setIsSubmitted(true), 0)
+      navigate("/sub")
     }
   }
 
   const handleBuildMemeClick = () => {
     setInputValue("")
-    setIsSubmitted("")
-    navigate("/memegen")
+    setIsSubmitted(false)
   }
 
   return (
@@ -29,11 +29,11 @@ function Layout() {
         className='bg-[#f7f6ee] text-[#101820] flex m-5 lg:m-10 rounded-lg '>
           <div className='w-full py-2 md:py-3 lg:py-4 xl:py-6 4k:py-10 flex flex-col justify-center items-center'>
             <h1 className='text-2xl md:text-5xl lg:text-6xl xl:text-7xl 4k:text-9xl'><b><a href='/'>Meme Hub</a></b></h1>
-            <NavLink 
-              className=" rounded-lg text-sm underline md:text-xl md:mt-1 lg:text-2xl xl:text-3xl 4k:mt-4 4k:text-5xl" 
+            <Link 
               to="/memegen"
+              className=" rounded-lg text-sm underline md:text-xl md:mt-1 lg:text-2xl xl:text-3xl 4k:mt-4 4k:text-5xl" 
               onClick={handleBuildMemeClick}
-            >Build a meme</NavLink>
+            >Build a meme</Link>
           </div>
           <form onSubmit={handleSubmit}className='flex justify-center items-center w-full'>
             <div className='mx-5 relative flex items-center'>
