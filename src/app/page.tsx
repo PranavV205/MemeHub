@@ -1,9 +1,9 @@
-import React from 'react'
+import Hero from '@/components/Hero'
 
 function Home() {
   return (
-    <div className='bg-[#c0c1c7] min-h-screen'>
-
+    <div className='bg-[#F5F5F5] min-h-screen'>
+      <Hero />
     </div>
   )
 }

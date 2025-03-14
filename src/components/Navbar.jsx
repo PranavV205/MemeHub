@@ -3,17 +3,17 @@ import Link from 'next/link'
 
 function Navbar() {
     return (
-        <div className="p-4 bg-[#c0c1c7]">
-            <div className="flex justify-between items-center w-full p-3 bg-[#24252a] rounded-2xl">
+        <div className="p-4 bg-[#F5F5F5]">
+            <div className="flex justify-between items-center w-full p-3 bg-white rounded-2xl">
                 <Link href="/">
-                    <Image src="/logo.png" width={100} height={20} alt="Logo" />
+                    <h1 className='text-3xl bg-gradient-to-r from-[#6A35FF] to-[#FF3BFF] bg-clip-text text-transparent font-bold'>MEMEHUB</h1>
                 </Link>
-                <div className="flex gap-6">
-                    <Link href="/">Memegen</Link>
-                    <Link href="/">AI sm</Link>
-                    <Link href="/">Search?</Link>
+                <div className="flex gap-6 text-lg">
+                    <Link href="/" className='bg-gradient-to-r from-[#6A35FF] to-[#FF3BFF] bg-clip-text text-transparent font-bold hover:text-[#2EE6D6]' >Memegen</Link>
+                    <Link href="/" className='text-[#2D2D2D] hover:text-[#2EE6D6]'>AI sm</Link>
+                    <Link href="/" className='text-[#2D2D2D] hover:text-[#2EE6D6]'>Search?</Link>
                 </div>
-                <div className="bg-[#018aa7] p-2 rounded-xl text-white">dkls</div>
+                <div className="bg-gradient-to-r from-[#6A35FF] to-[#FF3BFF] p-2 rounded-xl text-white">Searchhhhh</div>
             </div>
         </div>
     )
