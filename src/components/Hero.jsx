@@ -24,7 +24,7 @@ function Hero() {
 
 function MemeRow({ subreddit }) {
 
-    const [count, setCount] = useState(4)
+    const [count, setCount] = useState(12)
     const { data: memeData, error } = useMemeData(subreddit, count)
 
     if (error) {
@@ -35,7 +35,7 @@ function MemeRow({ subreddit }) {
 
     return (
         <>
-            <div className='flex flex-col items-center mb-4 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-4 xl:flex xl:flex-row xl:grid-rows-none xl:grid-cols-none xl:gap-8 4k:gap-11'>
+            <div className='mb-4 grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4'>
                 {memeData ?
                     <MemeCard
                         memeData={memeData}
