@@ -1,9 +1,9 @@
-import Hero from '@/components/Hero'
+import Landing from '@/components/Landing'
 
 function Home() {
   return (
     <div className='bg-[#F5F5F5] min-h-screen'>
-      <Hero />
+      <Landing />
     </div>
   )
 }
