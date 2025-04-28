@@ -32,8 +32,8 @@
     user-select: none;
     position: absolute;
     font-weight: 900;
-    font-size: 4rem;
-    left: 1.6em;
+    font-size: 2rem;
+    left: 4em;
     top: 50%;
 }
 
@@ -70,8 +70,9 @@
     max-width: 10ch;
     top: 50%;
     font-size: 1.5rem;
-    right: 1%;
+    right: 7%;
     transform: translate(0, -50%);
+    font-weight: 600;
 }
 
 .face-description.active {
@@ -109,7 +110,7 @@
     transition: 0.1s ease;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1224px) {
 
     .face-title,
     .face-description {

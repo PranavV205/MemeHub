@@ -9,7 +9,8 @@ const subreddits = [
     'Animemes',
     'TheRealJoke',
     'formuladank',
-    'comedyheaven'
+    'comedyheaven',
+    'memes'
 ]
 
 export default subreddits
