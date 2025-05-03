@@ -1,19 +1,25 @@
-import Image from 'next/image'
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
 
 function Navbar() {
+
+    const [input, setInput] = useState('')
+
     return (
-        <div className="p-4 bg-[#F5F5F5]">
-            <div className="flex justify-between items-center w-full p-3 bg-white rounded-2xl">
-                <Link href="/">
-                    <h1 className='text-3xl bg-gradient-to-r from-[#6A35FF] to-[#FF3BFF] bg-clip-text text-transparent font-bold'>MEMEHUB</h1>
-                </Link>
-                <div className="flex gap-6 text-lg">
-                    <Link href="/" className='bg-gradient-to-r from-[#6A35FF] to-[#FF3BFF] bg-clip-text text-transparent font-bold hover:text-[#2EE6D6]' >Memegen</Link>
-                    <Link href="/" className='text-[#2D2D2D] hover:text-[#2EE6D6]'>AI sm</Link>
-                    <Link href="/" className='text-[#2D2D2D] hover:text-[#2EE6D6]'>Search?</Link>
-                </div>
-                <div className="bg-gradient-to-r from-[#6A35FF] to-[#FF3BFF] p-2 rounded-xl text-white">Searchhhhh</div>
+        <div className='flex justify-between items-center p-2 h-[5%]'>
+            <div>
+                <h1 className='text-3xl'>MemeHub</h1>
+            </div>
+            <div>
+                <h3 className='text-2xl cursor-pointer'>Meme Generator</h3>
+            </div>
+            <div>
+                <input
+                    className='bg-white rounded-xl pl-4 text-black focus:outline-none'
+                    placeholder='Search'
+                />
             </div>
         </div>
     )
