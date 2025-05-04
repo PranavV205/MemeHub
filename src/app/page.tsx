@@ -13,15 +13,15 @@ function Home() {
           <Navbar />
           <Hero />
         </div>
-         
-         
-        <div className='h-[100vh]'>
-                    <TextReveal/>
-        </div>
+
 
         <div className='h-[100vh]'>
+          <TextReveal />
+        </div>
+
+        {/* <div className='h-[100vh]'>
           <RollingG />
-          </div>
+          </div> */}
 
       </div>
 

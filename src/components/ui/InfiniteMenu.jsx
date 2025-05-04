@@ -930,14 +930,14 @@ export default function InfiniteMenu({ items = [] }) {
             {/* Feel free to customize what's displayed when the menu is not being dragged and an item is displayed in the center */}
             {activeItem && (
                 <>
-                    <h2 className={`face-title ${isMoving ? 'inactive' : 'active'}`}>
+                    {/* <h2 className={`face-title ${isMoving ? 'inactive' : 'active'}`}>
                         {activeItem.title}
                     </h2>
 
-                    <p className={`face-description ${isMoving ? 'inactive' : 'active'}`}> {activeItem.description}</p>
+                    <p className={`face-description ${isMoving ? 'inactive' : 'active'}`}> {activeItem.description}</p> */}
 
                     <div onClick={handleButtonClick} className={`action-button ${isMoving ? 'inactive' : 'active'}`}>
-                        <p className="action-button-icon">&#x2197;</p>
+                        <p className="">r/{activeItem.description} &#x2197;</p>
                     </div>
                 </>
             )

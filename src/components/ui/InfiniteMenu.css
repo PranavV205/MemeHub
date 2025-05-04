@@ -15,18 +15,13 @@
 }
 
 .action-button {
-    position: absolute;
-    left: 50%;
-    z-index: 10;
-    width: 60px;
-    height: 60px;
-    display: grid;
-    place-items: center;
-    background: cyan;
-    border: none;
-    border-radius: 50%;
+    /* layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    border: 5px solid #000;
+    font-size: 1.4em;
+    font-weight: 600;
 }
 
 .face-title {
@@ -109,6 +104,10 @@
     opacity: 0;
     pointer-events: none;
     transition: 0.1s ease;
+}
+
+.action-butto:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 1224px) {
