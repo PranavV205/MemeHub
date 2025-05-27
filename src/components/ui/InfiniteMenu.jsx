@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { mat4, quat, vec2, vec3 } from 'gl-matrix';
 import './InfiniteMenu.css';
+import Link from 'next/link';
 
 const discVertShaderSource = `#version 300 es
 
@@ -937,7 +938,7 @@ export default function InfiniteMenu({ items = [] }) {
                     <p className={`face-description ${isMoving ? 'inactive' : 'active'}`}> {activeItem.description}</p> */}
 
                     <div onClick={handleButtonClick} className={`action-button ${isMoving ? 'inactive' : 'active'}`}>
-                        <p className="">r/{activeItem.description} &#x2197;</p>
+                        <Link href={activeItem.link}><p className="">r/{activeItem.description} &#x2197;</p></Link>
                     </div>
                 </>
             )

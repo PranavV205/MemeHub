@@ -21,7 +21,7 @@ function Subreddits() {
     const items = subreddits.map((subreddit, index) => {
         return {
             image: subreddit.imageFile,
-            link: '',
+            link: `/search?q=${subreddit.sub}`,   // /search?q=value
             description: subreddit.sub,
         }
     })
