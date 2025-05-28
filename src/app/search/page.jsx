@@ -5,6 +5,9 @@ import Image from "next/image"
 import { useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
 
+import ResultGrid from "@/components/ResultGrid"
+import Navbar from "@/components/Navbar"
+
 function Search() {
 
     const searchParams = useSearchParams()
@@ -14,7 +17,7 @@ function Search() {
 
     useEffect(() => {
         const fetchSubreddits = async () => {
-            const response = await axios.get(`https://meme-api.com/gimme/${subreddit}/50`)
+            const response = await axios.get(`https://meme-api.com/gimme/${subreddit}/20`)
             setMemes(response.data.memes)
         }
         fetchSubreddits()
@@ -22,14 +25,11 @@ function Search() {
 
     return (
         <div>
-            {memes && (
-                memes.map(meme => (
-                    <div key={meme.postLink}>
-                        <p>{meme.subreddit}</p>
-                        <p>{meme.title}</p>
-                    </div>
-                ))
-            )}
+            <Navbar />
+            <div className="p-8">
+                {/* need grid and list view toggle */}
+                <ResultGrid memes={memes} />
+            </div>
         </div>
     )
 }
