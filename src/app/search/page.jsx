@@ -24,9 +24,10 @@ function Search() {
     }, [])
 
     return (
-        <div>
+        <div className="bg-[#0c0e0c]">
             <Navbar />
-            <div className="p-8">
+            <div className="p-4 md:p-8">
+                <h2 className="text-xl lg:text-3xl font-bold mb-4"><span className="text-[#D93900]">r/</span>{subreddit}</h2>
                 {/* need grid and list view toggle */}
                 <ResultGrid memes={memes} />
             </div>

@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 function useMemeData(subreddit, count) {
@@ -9,9 +10,8 @@ function useMemeData(subreddit, count) {
     const getData = async () => {
         try {
             setIsLoading(true)
-            const response = await fetch(`https://meme-api.com/gimme/${subreddit}/${count}`)
-            const res = await response.json()
-            setData(res)
+            const response = await axios.get(`https://meme-api.com/gimme/${subreddit}/${count}`)
+            setData(response.data)
         } catch (e) {
             setError(e)
         } finally {
