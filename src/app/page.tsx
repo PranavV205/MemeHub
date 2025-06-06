@@ -5,7 +5,7 @@ import RollingG from '@/components/Landing/RollingG'
 import TextReveal from '@/components/Landing/TextReveal'
 function Home() {
   return (
-    <div className=' min-h-screen bg-black'>
+    <div className=' min-h-screen bg-[#0a0b06]'>
 
       <div className=''>
 
